@@ -47,7 +47,7 @@ router.delete('/:id', function(req, res){
 		}); 
 });
 
-router.post('/', upload.single('filename'),  function(req, res){
+router.post('/', upload.single('file'),  function(req, res){
 	console.log(req);
 	if(! req.file) {
 		res.status(400).send("Image upload failed");
