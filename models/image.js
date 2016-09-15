@@ -62,7 +62,7 @@ function getImage(imageID) {
 
 function getImages(){
 	var d = q.defer();
-	Image.find({}).exec(function(err, images){
+	Image.find({}).sort({date: -1}).exec(function(err, images){
 		if(err) {
 			d.reject(err);
 		}
