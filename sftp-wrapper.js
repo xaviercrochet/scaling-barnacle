@@ -11,8 +11,6 @@ var sftpWrapper = {
 sftp.connect({
     host: 'ssh.lisadeb.com',
     port: '22',
-    //username: 'lisadeb.com',
-    //password: 'HappyDays!'
     username: process.env.SFTP_USERNAME,
     password: process.env.SFTP_PASSWORD
 }).catch(function(error){
